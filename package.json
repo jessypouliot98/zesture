@@ -2,8 +2,10 @@
   "name": "zesture",
   "module": "index.ts",
   "type": "module",
+  "main": "index.ts",
   "scripts": {
-    "build": "bun build"
+    "build:dev": "bun build --entrypoints ./index.ts --outdir ./dist",
+    "build:prod": "bun build --entrypoints ./index.ts --outdir ./dist --minify"
   },
   "devDependencies": {
     "@types/bun": "latest"
